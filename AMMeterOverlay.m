@@ -129,13 +129,16 @@
         tickPosition = _meterOffset/1.5;
     }
     
-    int step = 10;
+    if (_dbStep == 0) {
+        _dbStep = 10;
+    }
+    int step = _dbStep;
     float currentDB = _lowestDB;
     int theCounter = 0;
     for (int x = 1;x<_lowestDB;x++){
         theCounter++;
         if (x>_lowestDB-10){
-            step = 5;
+            _dbStep = 5;
         }
         if (x>_lowestDB-5) {
             step = 2;
@@ -164,7 +167,7 @@
     
     // Place DB Labels
     UIFont *dbFont = [UIFont systemFontOfSize:_meterOffset/2 -4];
-    step = 10;
+    step = _dbStep;
     for (int d = _lowestDB; d>-1; d=d-step) {
         int modifier = 5;
         if (d == _lowestDB) {

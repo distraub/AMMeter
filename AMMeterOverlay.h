@@ -31,7 +31,8 @@
 @interface AMMeterOverlay : UIView
 // set the offset of the meter in pixels
 @property (nonatomic, readwrite) float meterOffset;
-
+// set the step increment for when db is above 10
+@property (nonatomic, readwrite) int dbStep;
 
 - (id)initWithFrame:(CGRect)frame andLabels:(bool)labelsRightSide andLowestDB:(float)lowestDB;
 
