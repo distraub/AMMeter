@@ -44,4 +44,4 @@ Then in my updateDB method: after getting my amplitude in DB from my chaneel (fl
 
 ```objective-c
 _meter.peakDB = dbLevel;
-```s
+```
