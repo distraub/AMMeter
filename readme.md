@@ -40,7 +40,7 @@ I do this with a runloop from an NSTimer, for example 60 times per second...
 _playTimer = [NSTimer scheduledTimerWithTimeInterval:1/60 target:self selector:@selector(updateDB) userInfo:nil repeats:YES];
     [[NSRunLoop mainRunLoop] addTimer:_playTimer forMode:NSRunLoopCommonModes];
 ``` 
-Then in my updateDB method: after getting my amplitude in DB from my chaneel (float)dbLevl variable
+Then in my updateDB method: after getting my amplitude in DB from my channel (float)dbLevl variable
 
 ```objective-c
 _meter.peakDB = dbLevel;
