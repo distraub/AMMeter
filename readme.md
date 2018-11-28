@@ -32,7 +32,7 @@ _meter.delegate = self;
 LabelsOnRight is a bool that decides if the labels are on the right side or left.
 Lowest DB is a setting that indicates the lowest visible DB in the meter.
 
-Setting the delegate will let you use the slider to set the volume of an audio channel controleld by your audio engine.
+Setting the delegate will let you use the slider to set the volume of an audio channel controlled by your audio engine.
 
 Then you send amplitude information from the channel you are monitoring to the AMMeter instance.
 I do this with a runloop from an NSTimer, for example 60 times per second...
